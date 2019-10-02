@@ -44,7 +44,7 @@ import textwrap
 
 p = Player(room['outside'])
 
-print(p)
+# print(p.room)
 
 # Write a loop that:
 #
@@ -53,6 +53,13 @@ print(p)
 # * Waits for user input and decides what to do.
 #
 
+direction = input("Which direction would you like to po? ")
+
+while input("") != "q":
+    print(f"{p.room.name} {p.room.description}")
+    print(type(direction))
+    if (direction == "e"):
+        room.e_to
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
