@@ -2,4 +2,4 @@
 # currently.
 class Player:
     def __init__(self, room):
-        self.room = "outside"
+        self.room = room

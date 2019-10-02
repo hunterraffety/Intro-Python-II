@@ -37,14 +37,16 @@ room['treasure'].s_to = room['narrow']
 # Main
 #
 
+import textwrap
+
 # Make a new player object that is currently in the 'outside' room.
 class Player:
     def __init__(self, room):
-        self.room = "outside"
+        self.room = room
 
 p = Player("outside")
 
-print(p)
+print(p.room)
 
 # Write a loop that:
 #
@@ -52,6 +54,7 @@ print(p)
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 #
+
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
