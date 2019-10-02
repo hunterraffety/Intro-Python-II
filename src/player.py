@@ -5,5 +5,4 @@ class Player:
         self.room = room
     def __str__(self):
         s = f"Room: {self.room}"
-
         return s
