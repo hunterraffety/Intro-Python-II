@@ -38,6 +38,13 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+class Player:
+    def __init__(self, room):
+        self.room = "outside"
+
+p = Player("outside")
+
+print(p)
 
 # Write a loop that:
 #
