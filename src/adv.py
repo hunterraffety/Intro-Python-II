@@ -1,4 +1,5 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
@@ -40,13 +41,10 @@ room['treasure'].s_to = room['narrow']
 import textwrap
 
 # Make a new player object that is currently in the 'outside' room.
-class Player:
-    def __init__(self, room):
-        self.room = room
 
-p = Player('outside')
+p = Player(room['outside'])
 
-print(p.room)
+print(p)
 
 # Write a loop that:
 #
