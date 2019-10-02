@@ -42,7 +42,7 @@ import textwrap
 
 # Make a new player object that is currently in the 'outside' room.
 
-p = Player(room['outside'])
+p = Player("Louise", room['outside'])
 
 # print(p.room)
 
@@ -53,13 +53,22 @@ p = Player(room['outside'])
 # * Waits for user input and decides what to do.
 #
 
-direction = input("Which direction would you like to po? ")
+directions = input("Which direction would you like to go? N E S or W? ")
+#ok, i struggled to get directions to update the way I wanted to even begin to detect the correct if/elif statement because I was trying to use input(type(directions)) and that was throwing me off for the first hour after finally understanding what the directions are. I am going to try and figure out if we can use the methods that are attaching the rooms up there somehow or if we have to write new ones.
 
-while input("") != "q":
-    print(f"{p.room.name} {p.room.description}")
-    print(type(direction))
-    if (direction == "e"):
-        room.e_to
+while directions != "q":
+    print(f"{p.room.name}: {p.room.description}")
+    print(directions)
+    if directions == "n":
+        print("n")
+    elif directions == "e":
+        print(f"e")
+    elif directions == "s":
+        print(f"s")
+    elif directions == "s":
+        print(f"s")
+    else:
+        quit()
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
