@@ -58,13 +58,25 @@ while playerInput != "q":
     userInput = input("? ")
     if userInput == "n" or "e" or "s" or "w" or "q":
         if userInput == "n":
-            player.current_room = player.current_room.n_to
+            if hasattr(player.current_room, 'n_to'):
+                player.current_room = player.current_room.n_to
+            else:
+                print("Can't go that direction.")
         elif userInput == "e":
-            player.current_room = player.current_room.e_to
+            if hasattr(player.current_room, 'e_to'):
+                player.current_room = player.current_room.e_to
+            else:
+                print("Can't go that direction.")
         elif userInput == "s":
-            player.current_room = player.current_room.s_to
+            if hasattr(player.current_room, 's_to'):
+                player.current_room = player.current_room.s_to
+            else:
+                print("Can't go that direction.")
         elif userInput == "w":
-            player.current_room = player.current_room.w_to
+            if hasattr(player.current_room, 'w_to'):
+                player.current_room = player.current_room.w_to
+            else:
+                print("Can't go that direction.")
         elif userInput == "q":
             break
         else:
