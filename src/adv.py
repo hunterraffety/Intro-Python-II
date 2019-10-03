@@ -57,7 +57,10 @@ while playerInput != "q":
     print("Which direction would you like to go? North, East, South, or West?")
     userInput = input("? ")
     if userInput == "n":
+        print(f"current room reference: {player.current_room}")
+        player.current_room = player.current_room.n_to
         print(f"n was entered")
+        print(f"new current room ?reference? {player.current_room}")
     else:
         break
 # If the user enters a cardinal direction, attempt to move to the room there.
