@@ -68,7 +68,7 @@ while playerInput != "q":
         elif userInput == "q":
             break
         else:
-            print(f"You can't go that way. Try another direction.")
+            print(f"Invalid key entered.")
     else:
         break
 # If the user enters a cardinal direction, attempt to move to the room there.
