@@ -58,25 +58,13 @@ while playerInput != "q":
     userInput = input("? ")
     if userInput == "n" or "e" or "s" or "w" or "q":
         if userInput == "n":
-            print(f"current room reference: {player.current_room}")
             player.current_room = player.current_room.n_to
-            print(f"n was entered")
-            print(f"new current room ?reference? {player.current_room}")
         elif userInput == "e":
-            print(f"current room reference: {player.current_room}")
             player.current_room = player.current_room.e_to
-            print(f"e was entered")
-            print(f"new current room ?reference? {player.current_room}")
         elif userInput == "s":
-            print(f"current room reference: {player.current_room}")
             player.current_room = player.current_room.s_to
-            print(f"s was entered")
-            print(f"new current room ?reference? {player.current_room}")
         elif userInput == "w":
-            print(f"current room reference: {player.current_room}")
             player.current_room = player.current_room.w_to
-            print(f"w was entered")
-            print(f"new current room ?reference? {player.current_room}")
         elif userInput == "q":
             break
         else:
