@@ -63,9 +63,24 @@ while playerInput != "q":
             print(f"n was entered")
             print(f"new current room ?reference? {player.current_room}")
         elif userInput == "e":
-            print(f"Are you going east?")
+            print(f"current room reference: {player.current_room}")
+            player.current_room = player.current_room.e_to
+            print(f"e was entered")
+            print(f"new current room ?reference? {player.current_room}")
+        elif userInput == "s":
+            print(f"current room reference: {player.current_room}")
+            player.current_room = player.current_room.s_to
+            print(f"s was entered")
+            print(f"new current room ?reference? {player.current_room}")
+        elif userInput == "w":
+            print(f"current room reference: {player.current_room}")
+            player.current_room = player.current_room.w_to
+            print(f"w was entered")
+            print(f"new current room ?reference? {player.current_room}")
         elif userInput == "q":
             break
+        else:
+            print(f"You can't go that way. Try another direction.")
     else:
         break
 # If the user enters a cardinal direction, attempt to move to the room there.
