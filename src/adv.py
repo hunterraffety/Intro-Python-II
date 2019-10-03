@@ -42,7 +42,7 @@ import textwrap
 
 # Make a new player object that is currently in the 'outside' room.
 
-p = Player("Louise", room['outside'])
+player = Player("Louise", room['outside'])
 
 # Write a loop that:
 #
@@ -50,7 +50,16 @@ p = Player("Louise", room['outside'])
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 #
+playerInput = ""
 
+while playerInput != "q":
+    print(player)
+    print("Which direction would you like to go? North, East, South, or West?")
+    userInput = input("? ")
+    if userInput == "n":
+        print(f"n was entered")
+    else:
+        break
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
