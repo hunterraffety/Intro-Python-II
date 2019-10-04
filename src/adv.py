@@ -41,14 +41,24 @@ room['treasure'].s_to = room['narrow']
 
 import textwrap
 #
-player = Player("Louise", room['outside'], None)
+player = Player("Louise", room['outside'])
 
 def getitems(player):
     print(f"{player.player_name} is in {player.current_room}")
     if player.current_room.items == "nothing":
         print(f"You have nothing currently. Adventure forth.")
     else:
-        print(f"This room has {player.current_room.items}")
+        print(f"This room has {player.current_room.items}. You currently have {player.items}")
+        item = player.current_room.items
+        grabitem = input(f"Take this item? Y, N, or Drop ")
+        if grabitem == "y":
+            player.additem(item)
+            print(f"Smart move. Continue forth.")
+        elif grabitem == "d":
+            player.dropitem(item)
+            print(f"You dropped {item}. Continue on.")
+        elif grabitem == "n":
+            pass
 
 playerInput = ""
 
