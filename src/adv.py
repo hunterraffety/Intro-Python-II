@@ -6,7 +6,7 @@ from item import Item
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-"North of you, the cave mount beckons", "Empty"),
+"North of you, the cave mount beckons", "nothing"),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east.""", "Sword"),
@@ -43,11 +43,17 @@ import textwrap
 #
 player = Player("Louise", room['outside'], None)
 
+def getitems(player):
+    print(f"{player.player_name} is in {player.current_room}")
+    if player.current_room.items == "nothing":
+        print(f"You have nothing currently. Adventure forth.")
+    else:
+        print(f"This room has {player.current_room.items}")
 
 playerInput = ""
 
 while playerInput != "q":
-    print(player)
+    print(getitems(player))
     print("Which direction would you like to go? North, East, South, or West?")
     userInput = input("? ")
     if userInput == "n" or "e" or "s" or "w" or "q":
